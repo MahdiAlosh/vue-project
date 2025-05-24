@@ -16,6 +16,8 @@ coverage
 
 /cypress/videos/
 /cypress/screenshots/
+/_theme_files/
+/vue-crash-2024-main/
 
 # Editor directories and files
 .vscode/*

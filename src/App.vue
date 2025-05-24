@@ -36,7 +36,7 @@ export default {
 <script setup>
 // Conversion to Composition API
 
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const message = ref('Hello Vue!');
 const status = ref('pending');
@@ -65,7 +65,17 @@ const addTask = () => {
 
 const deleteTask = (index) => {
   tasks.value.splice(index, 1); // remove task at index
-}
+};
+
+onMounted(async () => {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+    const data = await response.json();
+    tasks.value = data.map((task) => task.title);
+  } catch (error) {
+    console.log('Error fetching tasks:', error);
+  }
+});
 
 </script>
 
