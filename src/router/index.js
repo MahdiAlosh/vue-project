@@ -4,6 +4,7 @@ import JobsView from '@/views/JobsView.vue';
 // import JobsAddView from '@/views/JobsAddView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 import JobView from '@/views/JobView.vue';
+import BackButton from '@/components/BackButton.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,11 @@ const router = createRouter({
       name: 'job-view',
       component: JobView,
     },
+    // {
+    //   path: '/jobs-back',
+    //   name: 'jobs-back',
+    //   component: BackButton,
+    // },
     // {
     //   path: '/jobs/add',
     //   name: 'jobs-add',
