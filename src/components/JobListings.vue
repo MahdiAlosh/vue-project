@@ -39,7 +39,7 @@ const state = reactive({
 // reactive:
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3000/jobs'); // Replace with your API endpoint
+    const response = await axios.get('/api/jobs'); // Replace with your API endpoint
     state.jobs = response.data; // Assign the fetched data to the jobs reference
   } catch (error) {
     console.error('Error fetching job data:', error);
