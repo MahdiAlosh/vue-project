@@ -1,6 +1,6 @@
 <script setup>
-import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
-import axios from 'axios'; // Importing axios for making HTTP requests
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue'; //npm i vue-spinner
+import axios from 'axios'; // Importing axios for making HTTP requests: npm i axios  
 import { reactive, onMounted } from 'vue';
 import { useRoute, RouterLink } from 'vue-router';
 import BackButton from '@/components/BackButton.vue';
@@ -36,8 +36,8 @@ onMounted(async () => {
             <div class="text-gray-500 mb-4">{{ state.job.type }}</div>
             <h1 class="text-3xl font-bold mb-4">{{ state.job.title }}</h1>
             <div class="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
-              <i class="fa-solid fa-location-dot text-lg text-orange-700 mr-2"></i>
-              <p class="text-orange-700">{{ state.job.location }}</p>
+              <i class="text-xl pi pi-map-marker text-orange-500 mr-2"></i>
+              <p class="text-orange-500">{{ state.job.location }}</p>
             </div>
           </div>
 
