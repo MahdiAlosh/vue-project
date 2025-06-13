@@ -15,3 +15,6 @@ const app = createApp(App);
 app.use(router);
 app.use(Toast);
 app.mount('#app');
+
+// npm run dev
+// npm run build
