@@ -18,3 +18,6 @@ app.mount('#app');
 
 // npm run dev
 // npm run build
+// npm run server
+// on package.json: "server": "json-server --watch src/jobs.json --port 3000"
+
